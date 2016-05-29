@@ -1,0 +1,2909 @@
+
+{
+    "info":{
+        "title":"REST API for Oracle Business Process Management",
+        "version":"2015.08.25",
+        "description":"Oracle Business Process Management REST Publishing API",
+        "x-summary":"Oracle Business Process Management REST Publishing API"
+    },
+    "paths":{
+        "/tasks/{id}/attachments/{attachmentName}":{
+            "get":{
+                "description":" Retrieves an attachment by name.",
+                "summary":"Retrieve a Task Attachment by Name",
+                "operationId":"get /tasks/{id}/attachments/{attachmentName}",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "levels":0,
+                                "links":[
+                                    {
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200000/attachmen ts/",
+                                        "length":0,
+                                        "rel":"back"
+                                    },
+                                    {
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200000/attachments/oct.pdf",
+                                        "length":0,
+                                        "rel":"self"
+                                    }
+                                ],
+                                "attachmentName":"oct.pdf",
+                                "mimeType":"application/pdf",
+                                "attachmentScope":"BPM",
+                                "attachmentSize":5,
+                                "uri":{
+                                    "href":"http://example.com/bpm/api/3.0/tasks/200000/attachments/oct.pdf/stream",
+                                    "length":0,
+                                    "rel":"stream"
+                                }
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"tasks-{id}-attachments-{attachmentName}-get"
+            },
+            "delete":{
+                "description":" Deletes an attachment by name.",
+                "summary":"Delete a Task Attachment",
+                "operationId":"delete /tasks/{id}/attachments/{attachmentName}",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                ],
+                "responses":{
+                    "200":{
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"tasks-{id}-attachments-{attachmentName}-delete"
+            }
+        },
+        "/identities/group":{
+        },
+        "/cases/{id}/milestones":{
+            "get":{
+                "description":" Retrieves case milestones.",
+                "summary":"Retrieve Case Milestones",
+                "operationId":"get /cases/{id}/milestones",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "type":"milestones",
+                                "levels":0,
+                                "links":[
+                                    {
+                                        "rel":"back",
+                                        "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c"
+                                    },
+                                    {
+                                        "rel":"self",
+                                        "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c/milestones"
+                                    }
+                                ],
+                                "milestone":{
+                                    "milestone":[
+                                        {
+                                            "name":"Lost",
+                                            "state":"NOT&#95ATTAINED",
+                                            "attain":{
+                                                "rel":"attain",
+                                                "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c/milestones/Lost?action=attain"
+                                            }
+                                        },
+                                        {
+                                            "name":"Authorized",
+                                            "state":"NOT&#95ATTAINED",
+                                            "attain":{
+                                                "rel":"attain",
+                                                "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c/milestones/Authorized?action=attain"
+                                            }
+                                        },
+                                        {
+                                            "name":"Returned",
+                                            "state":"NOT&#95ATTAINED",
+                                            "attain":{
+                                                "rel":"attain",
+                                                "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c/milestones/Returned?action=attain"
+                                            }
+                                        },
+                                        {
+                                            "name":"InReservation",
+                                            "state":"NOT&#95ATTAINED",
+                                            "attain":{
+                                                "rel":"attain",
+                                                "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c/milestones/InReservation?action=attain"
+                                            }
+                                        },
+                                        {
+                                            "name":"InRental",
+                                            "state":"NOT&#95ATTAINED",
+                                            "attain":{
+                                                "rel":"attain",
+                                                "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c/milestones/InRental?action=attain"
+                                            }
+                                        },
+                                        {
+                                            "name":"InAccident",
+                                            "state":"NOT&#95ATTAINED",
+                                            "attain":{
+                                                "rel":"attain",
+                                                "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c/milestones/InAccident?action=attain"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"cases-{id}-milestones-get"
+            }
+        },
+        "/identities/user":{
+        },
+        "/tasks/todoTask":{
+            "post":{
+                "description":" Creates a personal to-do task for an assignee.",
+                "summary":"Create a To-Do Task",
+                "operationId":"post /tasks/todoTask",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters":[
+                    {
+                        "x-examples":{
+                            "application/json":{
+                                "dueDate":"2015-07-26 11:58:59",
+                                "priority":"1",
+                                "startDate":"2015-05-26 11:58:59",
+                                "title":"myTodoTaskTesting5",
+                                "assignees":[
+                                    {
+                                        "id":"jlondon",
+                                        "type":"user"
+                                    }
+                                ]
+                            }
+                        },
+                        "schema":{
+                        },
+                        "name":"body",
+                        "in":"body",
+                        "description":"Body parameters are dueDate, priority, startDate, title, assignees. Parameters of assignees are id and type.",
+                        "required":false
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "updatedDate":"2015-06-03 01:46:19",
+                                "priority":1,
+                                "startDate":"2015-05-26 11:58:59",
+                                "assignedDate":"2015-06-03 01:46:19",
+                                "createdDate":"2015-06-03 01:46:19",
+                                "ownerUser":"James Cooper",
+                                "creator":"James Cooper",
+                                "actionList":[
+                                    {
+                                        "actionType":"System",
+                                        "rel":"self",
+                                        "title":"CREATE_TODO",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200002?action=CREATE_TODO"
+                                    },
+                                    {
+                                        "actionType":"System",
+                                        "rel":"self",
+                                        "title":"VIEW_PROCESS_HISTORY",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200002?action=VIEW_PROCESS_HISTORY"
+                                    }
+                                ],
+                                "number":200002,
+                                "links":[
+                                    {
+                                        "rel":"back",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/"
+                                    },
+                                    {
+                                        "rel":"self",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200002"
+                                    }
+                                ],
+                                "hasSubTasks":false,
+                                "title":"myTodoTaskTesting5",
+                                "type":"task",
+                                "dueDate":"2015-07-26 11:58:59"
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"tasks-todoTask-post"
+            }
+        },
+        "/cases/{id}/comments":{
+            "get":{
+                "description":" Retrieves case comments.",
+                "summary":"Retrieve Case Comments",
+                "operationId":"get /cases/{id}/comments",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "type":"comments",
+                                "levels":0,
+                                "links":[
+                                    {
+                                        "rel":"back",
+                                        "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c"
+                                    },
+                                    {
+                                        "rel":"self",
+                                        "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c/comments"
+                                    }
+                                ],
+                                "comment":{
+                                    "comment":[
+                                        {
+                                            "commentStr":"Testing Comments Post REST API",
+                                            "updatedBy":"jstein",
+                                            "updatedDate":"2015-06-08 14:43:08"
+                                        },
+                                        {
+                                            "commentStr":"Creating a case link",
+                                            "updatedBy":"wfaulk",
+                                            "updatedDate":"2015-06-05 17:42:51"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"cases-{id}-comments-get"
+            },
+            "post":{
+                "description":" Adds a comment to a case.",
+                "summary":"Add a Case Comment",
+                "operationId":"post /cases/{id}/comments",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters":[
+                    {
+                        "x-examples":{
+                            "application/json":{
+                                "commentStr":"Testing Comments Post REST API"
+                            }
+                        },
+                        "schema":{
+                        },
+                        "name":"body",
+                        "in":"body",
+                        "description":"",
+                        "required":false
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "type":"comments",
+                                "levels":0,
+                                "links":[
+                                    {
+                                        "rel":"back",
+                                        "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c"
+                                    },
+                                    {
+                                        "rel":"self",
+                                        "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c/comments"
+                                    }
+                                ],
+                                "comment":{
+                                    "comment":[
+                                        {
+                                            "commentStr":"Testing Comments Post REST API",
+                                            "updatedBy":"jstein",
+                                            "updatedDate":"2015-06-08 14:43:08"
+                                        },
+                                        {
+                                            "commentStr":"Creating a case link",
+                                            "updatedBy":"wfaulk",
+                                            "updatedDate":"2015-06-05 17:42:51"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"cases-{id}-comments-post"
+            }
+        },
+        "/archives":{
+            "post":{
+                "description":" Archives completed process instances.",
+                "summary":"Archive Process Instances",
+                "operationId":"post /archives",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters":[
+                    {
+                        "x-examples":{
+                            "application/json":{
+                                "composites":{
+                                    "compositeDN":[
+                                        "development/SimpleUserTaskSample!12.0*soa_974c4e61-d978-4736-add1-8cab2acf6ebb"
+                                    ]
+                                },
+                                "compositeStates":{
+                                    "compositeState":[
+                                        "4",
+                                        "5",
+                                        "6",
+                                        "7",
+                                        "8",
+                                        "9",
+                                        "10"
+                                    ]
+                                },
+                                "properties":{
+                                    "property":[
+                                        {
+                                            "name":"auditPayloadIncluded",
+                                            "value":true
+                                        },
+                                        {
+                                            "name":"auditImageIncluded",
+                                            "value":true
+                                        },
+                                        {
+                                            "name":"taskHistoryIncluded",
+                                            "value":true
+                                        },
+                                        {
+                                            "name":"rulesHistoryIncluded",
+                                            "value":"true"
+                                        },
+                                        {
+                                            "name":"notificationAddress",
+                                            "value":"john.steinbeck@example.com"
+                                        }
+                                    ]
+                                },
+                                "deleteInstances":true,
+                                "deleteRetention":"2014-09-23"
+                            }
+                        },
+                        "schema":{
+                        },
+                        "name":"body",
+                        "in":"body",
+                        "description":"Body parameter is composites. Parameters of composites are compositeDN, compositeStates, properties, deleteInstances, and deleteRetention. Parameter of compositeStates is compositeState. Parameter of properties is property. Parameters of property are name and value. Property names are auditPayloadIncluded, auditImageIncluded, taskHistoryIncluded, rulesHistoryIncluded, and notificationAddress.",
+                        "required":false
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "levels":1,
+                                "links":[
+                                    {
+                                        "href":"http://example.com/bpm/api/3.0/",
+                                        "length":0,
+                                        "rel":"back"
+                                    },
+                                    {
+                                        "href":"http://example.com/bpm/api/3.0/archives",
+                                        "length":0,
+                                        "rel":"self"
+                                    }
+                                ],
+                                "title":"Archive requests for jstein",
+                                "archives":[
+                                    {
+                                        "href":"http://example.com/bpm/api/3.0/archives/401",
+                                        "length":0,
+                                        "rel":"self",
+                                        "id":"401",
+                                        "state":"COMPLETED",
+                                        "requester":"jstein"
+                                    },
+                                    {
+                                        "href":"http://example.com/bpm/api/3.0/archives/501",
+                                        "length":0,
+                                        "rel":"self",
+                                        "id":"501",
+                                        "state":"COMPLETED",
+                                        "requester":"jstein"
+                                    }
+                                ],
+                                "archiveCount":2
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"archives-post"
+            }
+        },
+        "/identities/role/{roleid}":{
+            "get":{
+                "description":" Retrieves a user role by role ID.",
+                "summary":"Retrieve a Role",
+                "operationId":"get /identities/role/{roleid}",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                    {
+                        "name":"appId",
+                        "in":"query",
+                        "description":"Application ID",
+                        "required":false
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "levels":0,
+                                "email":"",
+                                "identityName":"BPMWorkflowAdmin",
+                                "identityType":"Application Role"
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"identities-role-{roleid}-get"
+            }
+        },
+        "/tasks/{id}/comments":{
+            "get":{
+                "description":" Retrieves task comments.",
+                "summary":"Retrieve Task Comments",
+                "operationId":"get /tasks/{id}/comments",
+                "produces":[
+                    "application/json"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "comments":{
+                                    "comment":{
+                                        "commentStr":"This is my first comment",
+                                        "updatedBy":"jstein"
+                                    }
+                                }
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Comments retrieved"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"tasks-{id}-comments-get"
+            },
+            "post":{
+                "description":" Adds a comment to a task.",
+                "summary":"Add a Task Comment",
+                "operationId":"post /tasks/{id}/comments",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                    "application/json"
+                ],
+                "parameters":[
+                    {
+                        "x-examples":{
+                            "application/json":{
+                                "commentStr":"This is a new comment"
+                            }
+                        },
+                        "schema":{
+                        },
+                        "name":"body",
+                        "in":"body",
+                        "description":"Body parameter is commentStr",
+                        "required":false
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "levels":0,
+                                "links":[
+                                    {
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200000",
+                                        "length":0,
+                                        "rel":"back"
+                                    },
+                                    {
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200000/comments",
+                                        "length":0,
+                                        "rel":"self"
+                                    }
+                                ],
+                                "comment":[
+                                    {
+                                        "commentStr":"This is my first comment",
+                                        "updatedBy":"John Steinbeck",
+                                        "userId":"jstein",
+                                        "updateddDate":"2015-03-24 00:55:28"
+                                    }
+                                ]
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"tasks-{id}-comments-post"
+            }
+        },
+        "/cases/{id}/casedata":{
+            "get":{
+                "description":" Retrieves case data.",
+                "summary":"Retrieve Case Data",
+                "operationId":"get /cases/{id}/casedata",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "type":"caseDataList",
+                                "levels":0,
+                                "links":[
+                                    {
+                                        "rel":"back",
+                                        "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c"
+                                    },
+                                    {
+                                        "rel":"self",
+                                        "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c/casedata"
+                                    }
+                                ],
+                                "casedata":{
+                                    "casedata":[
+                                        {
+                                            "dataName":"customerStatus",
+                                            "dataStr":"&lt;customerStatus&gt; &lt;status&gt;RUBY&lt;/status&gt;&lt;/customerStatus&gt;",
+                                            "external":false,
+                                            "updatedDate":"2015-06-05 19:43:31"
+                                        },
+                                        {
+                                            "dataName":"driver",
+                                            "dataStr":"&lt;eurent:driver xmlns:eurent=\"http://xmlns.example.com/samples/casemgmt/EURent\"&gt;&lt;eurent:firstName&gt;Jim&lt;/eurent:firstName&gt;&lt;eurent:lastName&gt;Mitch&lt;/eurent:lastName&gt;&lt;eurent:licenseNumber&gt;DL345554&lt;/eurent:licenseNumber&gt;&lt;eurent:age&gt;30&lt;/eurent:age&gt;&lt;/eurent:driver&gt;",
+                                            "external":false,
+                                            "updatedDate":"2015-06-05 17:42:50"
+                                        },
+                                        {
+                                            "dataName":"reservation",
+                                            "dataStr":"&lt;eurent:reservation xmlns:eurent=\"http://xmlns.example.com/samples/casemgmt/EURent\"&gt;&lt;eurent:id/&gt;&lt;eurent:carType&gt;COMPACT&lt;/eurent:carType&gt;&lt;eurent:pickup&gt;2012-03-11&lt;/eurent:pickup&gt;&lt;eurent:dropoff&gt;2012-03-15&lt;/eurent:dropoff&gt;&lt;eurent:actualDropOff&gt;2012-03-15&lt;/eurent:actualDropOff&gt;&lt;eurent:totalCost/&gt;&lt;/eurent:reservation&gt;",
+                                            "external":false,
+                                            "updatedDate":"2015-06-05 17:42:50"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"cases-{id}-casedata-get"
+            },
+            "post":{
+                "description":" Adds case data.",
+                "summary":"Add Case Data",
+                "operationId":"post /cases/{id}/casedata",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters":[
+                    {
+                        "x-examples":{
+                            "application/json":{
+                                "dataName":"customerStatus",
+                                "dataStr":"&lt;customerStatus&gt; &lt;status&gt;RUBY&lt;/status&gt; &lt;/customerStatus&gt;",
+                                "external":"false"
+                            }
+                        },
+                        "schema":{
+                        },
+                        "name":"body",
+                        "in":"body",
+                        "description":"",
+                        "required":false
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"cases-{id}-casedata-post"
+            }
+        },
+        "/tasks/{id}/form":{
+            "get":{
+                "description":" Retrieves the web form associated with a task.",
+                "summary":"Retrieve a Task Form",
+                "operationId":"get /tasks/{id}/form",
+                "produces":[
+                    "text/html"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                    {
+                        "name":"user-agent",
+                        "in":"header",
+                        "description":"User agent",
+                        "required":false
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"tasks-{id}-form-get"
+            }
+        },
+        "/tasks/{id}/history":{
+            "get":{
+                "description":" Retrieves the history of a task.",
+                "summary":"Retrieve Task History",
+                "operationId":"get /tasks/{id}/history",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "levels":0,
+                                "links":[
+                                    {
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200003",
+                                        "length":0,
+                                        "rel":"back"
+                                    },
+                                    {
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200003/history",
+                                        "length":0,
+                                        "rel":"self"
+                                    }
+                                ],
+                                "taskHistory":[
+                                    {
+                                        "actionName":"Assigned",
+                                        "displayName":"John Steinbeck",
+                                        "userId":"jstein",
+                                        "pattern":"Participant",
+                                        "reason":"",
+                                        "updatedDate":"2015-03-09 15:39:08"
+                                    }
+                                ]
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"tasks-{id}-history-get"
+            }
+        },
+        "/identities/role":{
+        },
+        "/cases/{id}/activities":{
+            "get":{
+                "description":" Retrieves a list of case activities.",
+                "summary":"Retrieve Case Activities",
+                "operationId":"get /cases/{id}/activities",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                    {
+                        "name":"filter",
+                        "in":"query",
+                        "description":"What to filter by",
+                        "required":false
+                    },
+                    {
+                        "name":"orderBy",
+                        "in":"query",
+                        "description":"What to order by",
+                        "required":false
+                    },
+                    {
+                        "name":"orderColumn",
+                        "in":"query",
+                        "description":"Column to sort by",
+                        "required":false
+                    },
+                    {
+                        "name":"sortOrder",
+                        "in":"query",
+                        "description":"Order in which to sort",
+                        "required":false
+                    },
+                    {
+                        "name":"whereClause",
+                        "in":"query",
+                        "description":"Additional where clause filter",
+                        "required":false
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "type":"activities",
+                                "levels":0,
+                                "links":[
+                                    {
+                                        "rel":"back",
+                                        "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c"
+                                    },
+                                    {
+                                        "rel":"self",
+                                        "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c/activities"
+                                    }
+                                ],
+                                "activity":{
+                                    "activity":[
+                                        {
+                                            "name":"GetCar",
+                                            "displayName":"Find an available car",
+                                            "definitionId":"default/EURent!1.0/GetCar",
+                                            "isRequired":true,
+                                            "isRepeatable":true,
+                                            "isManual":true,
+                                            "relevance":"NONE",
+                                            "state":"AVAILABLE"
+                                        },
+                                        {
+                                            "name":"EmailActivity",
+                                            "displayName":"Send Email",
+                                            "definitionId":"http://xmlns.example.com/bpm/case/activity/EmailActivityDefinition",
+                                            "isRequired":false,
+                                            "isRepeatable":true,
+                                            "isManual":true,
+                                            "relevance":"NONE",
+                                            "state":"AVAILABLE"
+                                        },
+                                        {
+                                            "name":"SimpleWorkflowActivity",
+                                            "displayName":"Create Task",
+                                            "definitionId":"http://xmlns.example.com/bpm/case/activity/SimpleWFActivityDefinition",
+                                            "isRequired":false,
+                                            "isRepeatable":true,
+                                            "isManual":true,
+                                            "relevance":"NONE",
+                                            "state":"AVAILABLE"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"cases-{id}-activities-get"
+            }
+        },
+        "/tasks/{id}/attachments/{attachmentName}/stream":{
+            "get":{
+                "description":" Retrieves an attachment by name as a stream.",
+                "summary":"Retrieve a Task Attachment as a Stream",
+                "operationId":"get /tasks/{id}/attachments/{attachmentName}/stream",
+                "produces":[
+                    "application/json"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                ],
+                "responses":{
+                    "200":{
+                        "schema":{
+                        },
+                        "description":"Displays the file contents."
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"tasks-{id}-attachments-{attachmentName}-stream-get"
+            }
+        },
+        "/cases":{
+            "get":{
+                "description":" Retrieves cases.",
+                "summary":"Retrieve Cases",
+                "operationId":"get /cases",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                    {
+                        "type":"integer",
+                        "name":"limit",
+                        "in":"query",
+                        "description":"Maximum number of items per page. Set between 1 and 100. Default is 25.",
+                        "required":false
+                    },
+                    {
+                        "type":"integer",
+                        "name":"offset",
+                        "in":"query",
+                        "description":"Index for the first item on a page of list items. Default is 1.",
+                        "required":false
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "type":"cases",
+                                "levels":3,
+                                "links":[
+                                    {
+                                        "rel":"self",
+                                        "href":"http://example.com/bpm/api/3.0/cases/?limit=25&offset=0"
+                                    }
+                                ],
+                                "title":"Case List",
+                                "casecount":0,
+                                "cases":[
+                                    {
+                                        "rel":"case instance",
+                                        "title":"Car rental for Jim Mitch",
+                                        "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c",
+                                        "createdDate":"2015-06-05 17:42:50",
+                                        "state":"ACTIVE"
+                                    },
+                                    {
+                                        "rel":"case instance",
+                                        "title":"Car rental for Jim Mitch",
+                                        "href":"http://example.com/bpm/api/3.0/cases/c7c55f2c-33f7-4366-916e-748f6314615e",
+                                        "createdDate":"2015-06-05 17:42:45",
+                                        "state":"ACTIVE"
+                                    }
+                                ]
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"cases-get"
+            }
+        },
+        "/tasks/{id}/summaryField":{
+            "get":{
+                "description":" Retrieves the payload of a task.",
+                "summary":"Retrieve Task Payload",
+                "operationId":"get /tasks/{id}/summaryField",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "summaryFields":[
+                                    {
+                                        "category":"FlexField",
+                                        "dataType":"",
+                                        "displayName":"",
+                                        "name":"Reason For Vacation",
+                                        "readOnly":"true",
+                                        "value":""
+                                    },
+                                    {
+                                        "category":"Standard",
+                                        "dataType":"java.lang.Integer",
+                                        "displayName":"Priority",
+                                        "name":"PRIORITY",
+                                        "readOnly":"false",
+                                        "value":"3"
+                                    },
+                                    {
+                                        "category":"Standard",
+                                        "dataType":"oracle.bpel.services.workflow.task.model.IdentityTypeImpl",
+                                        "displayName":"systemAttributes.assignees",
+                                        "name":"ASSIGNEES",
+                                        "readOnly":"true",
+                                        "value":"jstein"
+                                    },
+                                    {
+                                        "category":"Payload",
+                                        "dataType":"java.lang.String",
+                                        "displayName":"",
+                                        "name":"Purchase Order Id",
+                                        "readOnly":"false",
+                                        "value":""
+                                    },
+                                    {
+                                        "category":"Payload",
+                                        "dataType":"java.lang.String",
+                                        "displayName":"",
+                                        "name":"Ship Date",
+                                        "readOnly":"false",
+                                        "value":""
+                                    },
+                                    {
+                                        "category":"Payload",
+                                        "dataType":"java.lang.String",
+                                        "displayName":"",
+                                        "name":"Comments",
+                                        "readOnly":"false",
+                                        "value":""
+                                    }
+                                ],
+                                "priority":"0"
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"tasks-{id}-summaryField-get"
+            },
+            "post":{
+                "description":" Updates the payload of a task.",
+                "summary":"Update Task Payload",
+                "operationId":"post /tasks/{id}/summaryField",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters":[
+                    {
+                        "x-examples":{
+                            "application/json":{
+                                "summaryFields":[
+                                    {
+                                        "dataType":"",
+                                        "name":"Reason For Vacation",
+                                        "readOnly":true,
+                                        "value":"",
+                                        "displayName":"",
+                                        "category":"FlexField"
+                                    }
+                                ],
+                                "comment":"TaskSummaryField Upload",
+                                "priority":"1"
+                            }
+                        },
+                        "schema":{
+                        },
+                        "name":"body",
+                        "in":"body",
+                        "description":"Body parameters are summaryFields, comment, priority. Parameters of summaryFields are dataType, name, readOnly, value, displayName, category, flexField.",
+                        "required":false
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"tasks-{id}-summaryField-post"
+            }
+        },
+        "/cases/{id}/activities/{activityDefinitionId}":{
+            "post":{
+                "description":" Creates a case activity.",
+                "summary":"Create a Case Activity",
+                "operationId":"post /cases/{id}/activities/{activityDefinitionId}",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                    {
+                        "name":"action",
+                        "in":"query",
+                        "description":"Action performed",
+                        "required":false
+                    },
+                    {
+                        "name":"comment",
+                        "in":"query",
+                        "description":"Optional comment",
+                        "required":false
+                    },
+                    {
+                        "name":"relevance",
+                        "in":"query",
+                        "description":"Relevance",
+                        "required":false
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"cases-{id}-activities-{activityDefinitionId}-post"
+            }
+        },
+        "/tasks/views/{viewname}":{
+            "get":{
+                "description":" Retrieves a task view by name.",
+                "summary":"Retrieve a Task View",
+                "operationId":"get /tasks/views/{viewname}",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                    {
+                        "name":"priority",
+                        "in":"query",
+                        "description":"Task priority from 1 (highest) to 5 (lowest) or Any (default)",
+                        "required":false
+                    },
+                    {
+                        "type":"integer",
+                        "name":"offset",
+                        "in":"query",
+                        "description":"Index for the first item on a page of list items, default 1",
+                        "required":false
+                    },
+                    {
+                        "name":"columns",
+                        "in":"query",
+                        "description":"Displays only the selected task attributes",
+                        "required":false
+                    },
+                    {
+                        "name":"dueDateFrom",
+                        "in":"query",
+                        "description":"Start of due date range in the format yyyy-mm-dd hh:mm:ss",
+                        "required":false
+                    },
+                    {
+                        "type":"boolean",
+                        "name":"showPermission",
+                        "in":"query",
+                        "description":"Displays task permissions",
+                        "required":false
+                    },
+                    {
+                        "name":"process",
+                        "in":"query",
+                        "description":"Includes only tasks in a given process",
+                        "required":false
+                    },
+                    {
+                        "name":"fromuser",
+                        "in":"query",
+                        "description":"Previous task assignee in process",
+                        "required":false
+                    },
+                    {
+                        "name":"assignment",
+                        "in":"query",
+                        "description":"Task assignees - MY, GROUP,  MY&#95;AND&#95;GROUP (default), MY&#95;AND&#95;GROUP_ALL, REPORTEES, OWNER, REVIEWER, PREVIOUS, ALL, ADMIN",
+                        "required":false
+                    },
+                    {
+                        "type":"integer",
+                        "name":"limit",
+                        "in":"query",
+                        "description":"Maximum number of items per page, between 1 and 100, default 25",
+                        "required":false
+                    },
+                    {
+                        "name":"dueDateTo",
+                        "in":"query",
+                        "description":"End of due date range in the format yyyy-mm-dd hh:mm:ss",
+                        "required":false
+                    },
+                    {
+                        "name":"status",
+                        "in":"query",
+                        "description":"Task status - ASSIGNED (default), SUSPENDED, WITHDRAWN, EXPIRED, ERROR, ALERTED, NEED_INFORMATION",
+                        "required":false
+                    },
+                    {
+                        "name":"keyword",
+                        "in":"query",
+                        "description":"Keyword in task title",
+                        "required":false
+                    },
+                    {
+                        "name":"pattern",
+                        "in":"query",
+                        "description":"Includes only to-do tasks if set to ToDo",
+                        "required":false
+                    },
+                    {
+                        "name":"groupBy",
+                        "in":"query",
+                        "description":"Groups tasks by the selected task attribute",
+                        "required":false
+                    },
+                    {
+                        "type":"boolean",
+                        "name":"showAcion",
+                        "in":"query",
+                        "description":"Displays permissible task actions",
+                        "required":false
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "totalResult":true,
+                                "user":{
+                                    "rel":"user",
+                                    "href":"http://example.com/bpm/api/3.0/identities/user/jcooper"
+                                },
+                                "count":2,
+                                "hasMore":false,
+                                "items":[
+                                    {
+                                        "processName":"HelpDeskRequestProcess",
+                                        "updatedDate":"2015-06-03 01:26:16",
+                                        "priority":3,
+                                        "assignedDate":"2015-06-03 01:26:20",
+                                        "createdDate":"2015-06-03 01:26:16",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200000",
+                                        "assignees":{
+                                            "totalResult":false,
+                                            "hasMore":false,
+                                            "items":[
+                                            ]
+                                        },
+                                        "number":200000,
+                                        "hasSubTasks":false,
+                                        "title":"Help Desk Request for JuneTask1",
+                                        "rel":"self",
+                                        "type":"task",
+                                        "state":"ASSIGNED"
+                                    }
+                                ],
+                                "links":[
+                                    {
+                                        "rel":"back",
+                                        "href":"http://example.com/bpm/api/3.0/"
+                                    },
+                                    {
+                                        "rel":"self",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/views/6a3f7491-a040-425a-90c1-5859aec353ec?status=ASSIGNED&priority=Any&assignment=MY_AND_GROUP&keyword=&limit=25&offset=0"
+                                    }
+                                ]
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Lists the selected view name."
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"tasks-views-{viewname}-get"
+            }
+        },
+        "/tasks/views":{
+            "get":{
+                "description":" Retrieves a list of custom task lists (views) that the current user has defined.",
+                "summary":"Retrieve Custom Task Lists",
+                "operationId":"get /tasks/views",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "levels":3,
+                                "title":"List of views for jstein",
+                                "link":[
+                                    {
+                                        "href":"http://example.com/bpm/api/3.0/tasks/views/c7b3f2b2-f7d4-4ed6-81c7-87d352dc696a",
+                                        "length":0,
+                                        "rel":"self",
+                                        "title":"Due Soon"
+                                    },
+                                    {
+                                        "href":"http://example.com/bpm/api/3.0/tasks/views/a1e0f90f-e2f3-4365-9657-7463966ecfa1",
+                                        "length":0,
+                                        "rel":"self",
+                                        "title":"High Priority"
+                                    },
+                                    {
+                                        "href":"http://example.com/bpm/api/3.0/tasks/views/3caca10d-8913-4aa2-9f03-c84d22509ace",
+                                        "length":0,
+                                        "rel":"self",
+                                        "title":"Past Day"
+                                    },
+                                    {
+                                        "href":"http://example.com/bpm/api/3.0/tasks/views/ca2ec237-8764-406c-90c8-73be6d4795a3",
+                                        "length":0,
+                                        "rel":"self",
+                                        "title":"Past Week"
+                                    },
+                                    {
+                                        "href":"http://example.com/bpm/api/3.0/tasks/views/2d04b3d7-0740-43f0-8dff-21eb461a7fb6",
+                                        "length":0,
+                                        "rel":"self",
+                                        "title":"Past Month"
+                                    },
+                                    {
+                                        "href":"http://example.com/bpm/api/3.0/tasks/views/99396276-8235-47c2-b4a3-99e8f865894c",
+                                        "length":0,
+                                        "rel":"self",
+                                        "title":"Past Quarter"
+                                    },
+                                    {
+                                        "href":"http://example.com/bpm/api/3.0/tasks/views/e105c44b-9e29-4d49-bbae-cdad8b64ce46",
+                                        "length":0,
+                                        "rel":"self",
+                                        "title":"New Tasks"
+                                    }
+                                ]
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"tasks-views-get"
+            }
+        },
+        "/process-definitions":{
+            "get":{
+                "description":" Retrieves process definitions.",
+                "summary":"Retrieve Process Definitions",
+                "operationId":"get /process-definitions",
+                "produces":[
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"process-definitions-get"
+            }
+        },
+        "/identities":{
+            "get":{
+                "description":" Retrieves roles, groups, and users.",
+                "summary":"Retrieve Identities",
+                "operationId":"get /identities",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                    {
+                        "name":"searchPattern",
+                        "in":"query",
+                        "description":"<p>Pattern to search for, not case sensitive, default <em>, for example identities?searchPattern=j</em>&scope=user</p>",
+                        "required":false
+                    },
+                    {
+                        "name":"scope",
+                        "in":"query",
+                        "description":"Search scope - all (default), user, group, role",
+                        "required":false
+                    },
+                    {
+                        "name":"applicationId",
+                        "in":"query",
+                        "description":"Application in which to search",
+                        "required":false
+                    },
+                    {
+                        "name":"firstName",
+                        "in":"query",
+                        "description":"Search identities by firstName of User",
+                        "required":false
+                    },
+                    {
+                        "name":"lastName",
+                        "in":"query",
+                        "description":"Search identites by lastName of user",
+                        "required":false
+                    },
+                    {
+                        "name":"email",
+                        "in":"query",
+                        "description":"Search identites by email of user",
+                        "required":false
+                    },
+                    {
+                        "name":"limit",
+                        "in":"query",
+                        "description":"Maximum number of items per page. Set between 1 and 100. Default is 25.",
+                        "required":false
+                    },
+                    {
+                        "name":"offset",
+                        "in":"query",
+                        "description":"Index for the first item on a page of list items. Default is 1.",
+                        "required":false
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "totalResult":false,
+                                "hasMore":false,
+                                "items":[
+                                    {
+                                        "levels":0,
+                                        "title":"oraclesystemuser",
+                                        "id":"oraclesystemuser",
+                                        "type":"user",
+                                        "idLink":{
+                                            "href":"http://example.com/bpm/api/3.0/identities/user/oraclesystemuser",
+                                            "length":0,
+                                            "rel":"self"
+                                        },
+                                        "lastName":"OracleSystemUser"
+                                    },
+                                    {
+                                        "levels":0,
+                                        "title":"jstein",
+                                        "id":"jstein",
+                                        "type":"user",
+                                        "idLink":{
+                                            "href":"http://example.com/bpm/api/3.0/identities/user/jstein",
+                                            "length":0,
+                                            "rel":"self"
+                                        },
+                                        "lastName":"jstein"
+                                    },
+                                    {
+                                        "lastName":"Dickens",
+                                        "id":"cdickens",
+                                        "email":"cdickens@emailExample.com",
+                                        "firstName":"Charles",
+                                        "idLink":{
+                                            "href":"http://example.com/bpm/api/3.0/identities/user/cdickens",
+                                            "length":0,
+                                            "rel":"self"
+                                        },
+                                        "levels":0,
+                                        "title":"cdickens",
+                                        "type":"user",
+                                        "mobile":"300000001"
+                                    },
+                                    {
+                                        "levels":0,
+                                        "id":"LargeTestGroup",
+                                        "type":"group",
+                                        "email":"",
+                                        "idLink":{
+                                            "href":"http://example.com/bpm/api/3.0/identities/group/LargeTestGroup",
+                                            "length":0,
+                                            "rel":"self"
+                                        }
+                                    }
+                                ],
+                                "links":[
+                                    {
+                                        "href":"http://example.com/bpm/api/3.0/",
+                                        "length":0,
+                                        "rel":"back"
+                                    },
+                                    {
+                                        "href":"http://example.com/bpm/api/3.0/identities?searchPattern=*&applicationId=",
+                                        "length":0,
+                                        "rel":"self"
+                                    }
+                                ]
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"identities-get"
+            }
+        },
+        "/cases/{id}":{
+            "get":{
+                "description":" Retrieves a case by ID.",
+                "summary":"Retrieve a Case",
+                "operationId":"get /cases/{id}",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "casedata":{
+                                    "rel":"casedata",
+                                    "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c/casedata"
+                                },
+                                "startDate":"2015-06-05 17:42:50",
+                                "caseDefinitionName":"EURent",
+                                "stakeholders":{
+                                    "rel":"stakeholders",
+                                    "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c/stakeholders"
+                                },
+                                "activity":{
+                                    "rel":"activities",
+                                    "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c/activities"
+                                },
+                                "milestones":{
+                                    "rel":"milestones",
+                                    "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c/milestones"
+                                },
+                                "caseDefinitionId":"default/EURent!1.0/EURent",
+                                "links":[
+                                    {
+                                        "rel":"back",
+                                        "href":"http://example.com/bpm/api/3.0/cases/"
+                                    },
+                                    {
+                                        "rel":"self",
+                                        "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c"
+                                    }
+                                ],
+                                "levels":2,
+                                "title":"Car rental for Jim Mitch",
+                                "documents":{
+                                    "rel":"documents",
+                                    "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c/documents"
+                                },
+                                "type":"case",
+                                "categoryDisplayName":"Rent",
+                                "comments":{
+                                    "rel":"comments",
+                                    "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c/comments"
+                                },
+                                "state":"ACTIVE"
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"cases-{id}-get"
+            }
+        },
+        "/archives/{id}":{
+            "get":{
+                "description":" Retrieves a completed process instance archive by archive ID. Get the ID from the POST response body.",
+                "summary":"Retrieve a Process Instance Archive",
+                "operationId":"get /archives/{id}",
+                "produces":[
+                    "application/octet-stream"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                    {
+                        "name":"locuri",
+                        "in":"query",
+                        "description":"Local URI",
+                        "required":false
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"archives-{id}-get"
+            }
+        },
+        "/cases/{id}/milestones/{milestonename}":{
+            "post":{
+                "description":" Adds a milestone to a case.",
+                "summary":"Add a Case Milestone",
+                "operationId":"post /cases/{id}/milestones/{milestonename}",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters":[
+                    {
+                        "name":"action",
+                        "in":"query",
+                        "description":"Action performed",
+                        "required":false
+                    },
+                    {
+                        "schema":{
+                        },
+                        "name":"body",
+                        "in":"body",
+                        "description":"",
+                        "required":false
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"cases-{id}-milestones-{milestonename}-post"
+            }
+        },
+        "/tasks":{
+            "post":{
+                "description":" Creates a new task and returns the task ID.",
+                "summary":"Create a Task",
+                "operationId":"post /tasks",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters":[
+                    {
+                        "x-examples":{
+                            "application/json":{
+                                "title":"This is a test  Task Using Rest API",
+                                "startDate":"2013-09-05 03:16:19",
+                                "dueDate":"2013-09-07 03:16:19",
+                                "priority":3,
+                                "taskDefinitionId":"default/EURent!1.0/HandoverCar",
+                                "routingSlip":{
+                                    "routingType":"SIMPLE",
+                                    "resources":[
+                                        {
+                                            "value":"jcooper",
+                                            "identityType":"USER"
+                                        },
+                                        {
+                                            "value":"jstein",
+                                            "identityType":"USER"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "schema":{
+                        },
+                        "name":"body",
+                        "in":"body",
+                        "description":"Body parameters are title, startDate, dueDate, priority, taskDefinitionId, routingSlip. Parameters of routingSlip are routingType, resources. Parameters of resources are value, identityType.",
+                        "required":false
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "rel":"Task 200002 is created.",
+                                "href":"http://example.com/bpm/api/3.0/tasks/200002"
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"tasks-post"
+            },
+            "get":{
+                "description":" Retrieves a task list for the current user.",
+                "summary":"Retrieve a Task List",
+                "operationId":"get /tasks",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                    {
+                        "name":"priority",
+                        "in":"query",
+                        "description":"Task priority from 1 (highest) to 5 (lowest) or Any (default)",
+                        "required":false
+                    },
+                    {
+                        "type":"integer",
+                        "name":"offset",
+                        "in":"query",
+                        "description":"Index for the first item on a page of list items, default 1",
+                        "required":false
+                    },
+                    {
+                        "name":"columns",
+                        "in":"query",
+                        "description":"Displays only the selected task attributes",
+                        "required":false
+                    },
+                    {
+                        "name":"dueDateFrom",
+                        "in":"query",
+                        "description":"Start of due date range in the format yyyy-mm-dd hh:mm:ss",
+                        "required":false
+                    },
+                    {
+                        "type":"boolean",
+                        "name":"showPermission",
+                        "in":"query",
+                        "description":"Displays task permissions",
+                        "required":false
+                    },
+                    {
+                        "name":"process",
+                        "in":"query",
+                        "description":"Includes only tasks in a given process",
+                        "required":false
+                    },
+                    {
+                        "name":"fromuser",
+                        "in":"query",
+                        "description":"Previous task assignee in process",
+                        "required":false
+                    },
+                    {
+                        "name":"assignment",
+                        "in":"query",
+                        "description":"Task assignees - MY, GROUP,  MY&#95;AND&#95;GROUP (default), MY&#95;AND&#95;GROUP_ALL, REPORTEES, OWNER, REVIEWER, PREVIOUS, ALL, ADMIN",
+                        "required":false
+                    },
+                    {
+                        "type":"integer",
+                        "name":"limit",
+                        "in":"query",
+                        "description":"Maximum number of items per page, between 1 and 100, default 25",
+                        "required":false
+                    },
+                    {
+                        "name":"dueDateTo",
+                        "in":"query",
+                        "description":"End of due date range in the format yyyy-mm-dd hh:mm:ss",
+                        "required":false
+                    },
+                    {
+                        "name":"status",
+                        "in":"query",
+                        "description":"Task status - ASSIGNED (default), SUSPENDED, WITHDRAWN, EXPIRED, ERROR, ALERTED, NEED_INFORMATION",
+                        "required":false
+                    },
+                    {
+                        "name":"keyword",
+                        "in":"query",
+                        "description":"Keyword in task title",
+                        "required":false
+                    },
+                    {
+                        "name":"metadata",
+                        "in":"query",
+                        "description":"Displays task details URL",
+                        "required":false
+                    },
+                    {
+                        "name":"pattern",
+                        "in":"query",
+                        "description":"Filters tasks",
+                        "required":false
+                    },
+                    {
+                        "name":"groupBy",
+                        "in":"query",
+                        "description":"Groups tasks by the selected task attribute",
+                        "required":false
+                    },
+                    {
+                        "type":"boolean",
+                        "name":"showAcion",
+                        "in":"query",
+                        "description":"Displays permissible task actions",
+                        "required":false
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "totalResult":true,
+                                "user":{
+                                    "rel":"user",
+                                    "href":"http://example.com/bpm/api/3.0/identities/user/jlondon"
+                                },
+                                "count":1,
+                                "hasMore":false,
+                                "items":[
+                                    {
+                                        "updatedDate":"2015-05-27 00:03:37",
+                                        "priority":1,
+                                        "creatorName":"jstein",
+                                        "assignedDate":"2015-05-27 00:03:37",
+                                        "createdDate":"2015-05-27 00:03:37",
+                                        "ownerUser":"cdickens",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200012",
+                                        "assignees":{
+                                            "totalResult":false,
+                                            "hasMore":false,
+                                            "items":[
+                                                {
+                                                    "levels":0,
+                                                    "type":"user",
+                                                    "id":"jlondon"
+                                                }
+                                            ]
+                                        },
+                                        "number":200012,
+                                        "hasSubTasks":false,
+                                        "title":"myTodoTaskTestingV3",
+                                        "rel":"self",
+                                        "type":"task",
+                                        "state":"ASSIGNED",
+                                        "dueDate":"2015-07-26 11:58:59"
+                                    }
+                                ],
+                                "links":[
+                                    {
+                                        "rel":"back",
+                                        "href":"http://example.com/bpm/api/3.0/"
+                                    },
+                                    {
+                                        "rel":"self",
+                                        "href":"http://example.com/bpm/api/3.0/tasks?status=ASSIGNED&priority=&assignment=MY_AND_GROUP&keyword=&limit=25&offset=0"
+                                    }
+                                ]
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Lists existing tasks for the current user."
+                    },
+                    "500":{
+                        "schema":{
+                        },
+                        "description":"Failed to get task list."
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"tasks-get"
+            },
+            "put":{
+                "description":" Performs an action on a set of tasks defined by their IDs.",
+                "summary":"Perform an Action on Tasks",
+                "operationId":"put /tasks",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters":[
+                    {
+                        "x-examples":{
+                            "application/json":{
+                                "tasks":[
+                                    "200041",
+                                    "200042"
+                                ],
+                                "action":{
+                                    "id":"REASSIGN"
+                                },
+                                "comment":{
+                                    "commentStr":"BulkReassign",
+                                    "commentScope":"TASK"
+                                },
+                                "identities":[
+                                    {
+                                        "id":"jlondon",
+                                        "type":"user"
+                                    },
+                                    {
+                                        "id":"cdickens",
+                                        "type":"user"
+                                    }
+                                ]
+                            }
+                        },
+                        "schema":{
+                        },
+                        "name":"body",
+                        "in":"body",
+                        "description":"Body parameters are tasks, action, comment, identities. Parameters of tasks are taskid entries. Parameter of action is id, which can be set to ESCALATE, ACQUIRE, RELEASE, WITHDRAW, SUSPEND, RESUME, DELETE, PURGE, RENEW, or a custom action. Parameters of comment are commentStr and commentScope. Parameters of identities are id and type.",
+                        "required":false
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "totalResult":false,
+                                "user":{
+                                    "rel":"user",
+                                    "href":"http://example.com/bpm/api/3.0/identities/user/jlondon"
+                                },
+                                "hasMore":false,
+                                "items":[
+                                    {
+                                        "type":"task",
+                                        "rel":"self",
+                                        "title":"myTodoTaskTestingV3",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200042",
+                                        "hasSubTasks":false
+                                    }
+                                ]
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Performs the action and displays the result."
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"tasks-put"
+            }
+        },
+        "/tasks/{id}/todoTasks":{
+            "get":{
+                "description":" Retrieves to-do tasks.",
+                "summary":"Retrieve To-Do Tasks",
+                "operationId":"get /tasks/{id}/todoTasks",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                ],
+                "responses":{
+                    "200":{
+                        "schema":{
+                        },
+                        "description":"Success"
+                    },
+                    "404":{
+                        "schema":{
+                        },
+                        "description":"Not found"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"tasks-{id}-todoTasks-get"
+            }
+        },
+        "/identities/group/{groupid}":{
+            "get":{
+                "description":" Retrieves a group by group ID.",
+                "summary":"Retrieve a Group",
+                "operationId":"get /identities/group/{groupid}",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                ],
+                "responses":{
+                    "200":{
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"identities-group-{groupid}-get"
+            }
+        },
+        "/tasks/{id}":{
+            "get":{
+                "description":" Retrieves a task by task ID.",
+                "summary":"Retrieve a Task",
+                "operationId":"get /tasks/{id}",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                    {
+                        "name":"expanded",
+                        "in":"query",
+                        "description":"Comments, Attachments History in expanded form",
+                        "required":false
+                    },
+                    {
+                        "name":"metadata",
+                        "in":"query",
+                        "description":"Lists task details URL",
+                        "required":false
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "updatedDate":"2015-05-27 00:41:41",
+                                "priority":1,
+                                "startDate":"2015-05-26 11:58:59",
+                                "assignedDate":"2015-05-27 00:41:41",
+                                "createdDate":"2015-05-27 00:41:41",
+                                "ownerUser":"cdickens",
+                                "creator":"jstein",
+                                "actionList":[
+                                    {
+                                        "actionType":"System",
+                                        "rel":"self",
+                                        "title":"CREATE_TODO",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200021?action=CREATE_TODO"
+                                    },
+                                    {
+                                        "actionType":"System",
+                                        "rel":"self",
+                                        "title":"VIEW_PROCESS_HISTORY",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200021?action=VIEW_PROCESS_HISTORY"
+                                    },
+                                    {
+                                        "actionType":"System",
+                                        "rel":"self",
+                                        "title":"VIEW_TASK",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200021?action=VIEW_TASK"
+                                    },
+                                    {
+                                        "actionType":"System",
+                                        "rel":"self",
+                                        "title":"VIEW_TASK_HISTORY",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200021?action=VIEW_TASK_HISTORY"
+                                    },
+                                    {
+                                        "actionType":"System",
+                                        "rel":"self",
+                                        "title":"START_TASK",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200021?action=START_TASK"
+                                    },
+                                    {
+                                        "actionType":"System",
+                                        "rel":"self",
+                                        "title":"ESCALATE",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200021?action=ESCALATE"
+                                    },
+                                    {
+                                        "actionType":"System",
+                                        "rel":"self",
+                                        "title":"DELETE",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200021?action=DELETE"
+                                    },
+                                    {
+                                        "actionType":"System",
+                                        "rel":"self",
+                                        "title":"VIEW_SUB_TASKS",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200021?action=VIEW_SUB_TASKS"
+                                    },
+                                    {
+                                        "actionType":"System",
+                                        "rel":"self",
+                                        "title":"CUSTOM",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200021?action=CUSTOM"
+                                    },
+                                    {
+                                        "actionType":"System",
+                                        "rel":"self",
+                                        "title":"UPDATE",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200021?action=UPDATE"
+                                    },
+                                    {
+                                        "actionType":"System",
+                                        "rel":"self",
+                                        "title":"UPDATE_ATTACHMENT",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200021?action=UPDATE_ATTACHMENT"
+                                    },
+                                    {
+                                        "actionType":"System",
+                                        "rel":"self",
+                                        "title":"UPDATE_COMMENT",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200021?action=UPDATE_COMMENT"
+                                    }
+                                ],
+                                "number":200021,
+                                "links":[
+                                    {
+                                        "rel":"back",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/"
+                                    },
+                                    {
+                                        "rel":"self",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200021"
+                                    }
+                                ],
+                                "hasSubTasks":false,
+                                "title":"myTodoTaskTestingV3",
+                                "history":{
+                                    "rel":"self",
+                                    "href":"http://example.com/bpm/api/3.0/tasks/200021/history"
+                                },
+                                "type":"task",
+                                "comments":{
+                                    "rel":"self",
+                                    "href":"http://example.com/bpm/api/3.0/tasks/200021/comments"
+                                },
+                                "dueDate":"2015-07-26 11:58:59",
+                                "payload":{
+                                    "rel":"self",
+                                    "href":"http://example.com/bpm/api/3.0/tasks/200021/summaryField"
+                                },
+                                "attachments":{
+                                    "rel":"self",
+                                    "href":"http://example.com/bpm/api/3.0/tasks/200021/attachments"
+                                }
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Gets the specified Task."
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"tasks-{id}-get"
+            },
+            "put":{
+                "description":" Updates the task with the specified ID.",
+                "summary":"Update a Task",
+                "operationId":"put /tasks/{id}",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters":[
+                    {
+                        "name":"action",
+                        "in":"query",
+                        "description":"Action performed - ESCALATE, ACQUIRE, RELEASE, WITHDRAW, SUSPEND, RESUME, DELETE, PURGE, RENEW, or a custom action",
+                        "required":false
+                    },
+                    {
+                        "x-examples":{
+                            "application/json":{
+                                "action":{
+                                    "id":"DELEGATE"
+                                },
+                                "identities":[
+                                    {
+                                        "id":"jlondon",
+                                        "type":"user"
+                                    },
+                                    {
+                                        "id":"jlondon",
+                                        "type":"user"
+                                    }
+                                ]
+                            }
+                        },
+                        "schema":{
+                        },
+                        "name":"body",
+                        "in":"body",
+                        "description":"Body parameter is taskid",
+                        "required":false
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "updatedDate":"2015-06-01 03:21:39",
+                                "priority":1,
+                                "startDate":"2015-05-26 11:58:59",
+                                "assignedDate":"2015-06-01 03:21:39",
+                                "createdDate":"2015-05-27 00:41:41",
+                                "ownerUser":"cdickens",
+                                "creator":"jstein",
+                                "actionList":[
+                                    {
+                                        "actionType":"System",
+                                        "rel":"self",
+                                        "title":"CREATE_TODO",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200021?action=CREATE_TODO"
+                                    },
+                                    {
+                                        "actionType":"System",
+                                        "rel":"self",
+                                        "title":"VIEW_TASK",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200021?action=VIEW_TASK"
+                                    },
+                                    {
+                                        "actionType":"System",
+                                        "rel":"self",
+                                        "title":"VIEW_TASK_HISTORY",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200021?action=VIEW_TASK_HISTORY"
+                                    }
+                                ],
+                                "number":200021,
+                                "links":[
+                                    {
+                                        "rel":"back",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/"
+                                    },
+                                    {
+                                        "rel":"self",
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200021"
+                                    }
+                                ],
+                                "hasSubTasks":false,
+                                "title":"myTodoTaskTestingV3",
+                                "history":{
+                                    "rel":"self",
+                                    "href":"http://example.com/bpm/api/3.0/tasks/200021/history"
+                                },
+                                "type":"task",
+                                "comments":{
+                                    "rel":"self",
+                                    "href":"http://example.com/bpm/api/3.0/tasks/200021/comments"
+                                },
+                                "dueDate":"2015-07-26 11:58:59",
+                                "fromUserDisplayName":"Jack London",
+                                "payload":{
+                                    "rel":"self",
+                                    "href":"http://example.com/bpm/api/3.0/tasks/200021/summaryField"
+                                },
+                                "attachments":{
+                                    "rel":"self",
+                                    "href":"http://example.com/bpm/api/3.0/tasks/200021/attachments"
+                                }
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"tasks-{id}-put"
+            }
+        },
+        "/runtime":{
+            "get":{
+                "description":" Retrieves application runtime information.",
+                "summary":"Retrieve Application Information",
+                "operationId":"get /runtime",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                ],
+                "responses":{
+                    "200":{
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"runtime-get"
+            }
+        },
+        "/tasks/{id}/attachments":{
+            "get":{
+                "description":" Retrieves task attachments.",
+                "summary":"Retrieve Task Attachments",
+                "operationId":"get /tasks/{id}/attachments",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "levels":0,
+                                "links":[
+                                    {
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200003",
+                                        "length":0,
+                                        "rel":"back"
+                                    },
+                                    {
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200003/attachments",
+                                        "length":0,
+                                        "rel":"self"
+                                    }
+                                ],
+                                "attachment":[
+                                    {
+                                        "updatedDate":"2015-03-10 12:29:20",
+                                        "updatedBy":"John Steinbeck",
+                                        "attachmentScope":"BPM",
+                                        "uri":{
+                                            "href":"http://example.com/bpm/api/3.0/tasks/200003/attachments/Payment+Receipt.pdf/stream",
+                                            "length":0,
+                                            "rel":"stream"
+                                        },
+                                        "userId":"jstein",
+                                        "levels":0,
+                                        "title":"Payment Receipt.pdf",
+                                        "attachmentSize":69,
+                                        "mimeType":"application/pdf"
+                                    }
+                                ]
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Lists the attachments in the task."
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"tasks-{id}-attachments-get"
+            },
+            "post":{
+                "description":" Adds an attachment to a task.",
+                "summary":"Add a Task Attachment",
+                "operationId":"post /tasks/{id}/attachments",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                    "multipart/mixed"
+                ],
+                "parameters":[
+                    {
+                        "schema":{
+                        },
+                        "name":"body",
+                        "in":"body",
+                        "description":"File body with Content-Type header",
+                        "required":false
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "levels":0,
+                                "links":[
+                                    {
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200003",
+                                        "length":0,
+                                        "rel":"back"
+                                    },
+                                    {
+                                        "href":"http://example.com/bpm/api/3.0/tasks/200003/attachments",
+                                        "length":0,
+                                        "rel":"self"
+                                    }
+                                ],
+                                "attachment":[
+                                    {
+                                        "updatedDate":"2015-03-10 12:29:20",
+                                        "updatedBy":"John Steinbeck",
+                                        "attachmentScope":"BPM",
+                                        "uri":{
+                                            "href":"http://example.com/bpm/api/3.0/tasks/200003/attachments/Payment+Receipt.pdf/stream",
+                                            "length":0,
+                                            "rel":"stream"
+                                        },
+                                        "userId":"jstein",
+                                        "levels":0,
+                                        "title":"Payment Receipt.pdf",
+                                        "attachmentSize":69,
+                                        "mimeType":"application/pdf"
+                                    }
+                                ]
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"tasks-{id}-attachments-post"
+            }
+        },
+        "/identities/user/{userid}":{
+            "get":{
+                "description":" Retrieves a user by user ID.",
+                "summary":"Retrieve a User",
+                "operationId":"get /identities/user/{userid}",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                ],
+                "responses":{
+                    "200":{
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"identities-user-{userid}-get"
+            }
+        },
+        "/processes":{
+            "get":{
+                "description":" Retrieves process instances.",
+                "summary":"Retrieve Process Instances",
+                "operationId":"get /processes",
+                "produces":[
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"processes-get"
+            },
+            "post":{
+                "description":" Creates a process instance.",
+                "summary":"Create a Process Instance",
+                "operationId":"post /processes",
+                "produces":[
+                ],
+                "consumes":[
+                    "application/json"
+                ],
+                "parameters":[
+                    {
+                        "x-examples":{
+                            "application/json":{
+                                "processDefId":"development/App1!1.0*soa_19212859-874c-48b3-a0f5-7c01896f1b07/Process1",
+                                "serviceName":"Process1.service",
+                                "operation":"start",
+                                "payload":"&lt;start&gt;&lt;formArg  xmlns:ns2='http://www.frevvo.com/schemas/_NYGCsCcEEeSnC6deaxhQvA'&gt;&lt;ns2:MyForm1&gt;&lt;Text1&gt;StringValue3&lt;/Text1&gt;&lt;/ns2:MyForm1&gt;&lt;/formArg&gt;&lt;/start&gt;"
+                            }
+                        },
+                        "schema":{
+                        },
+                        "name":"body",
+                        "in":"body",
+                        "description":"Body parameters are processDefID, serviceName, operation, payload",
+                        "required":false
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"processes-post"
+            }
+        },
+        "/cases/{id}/stakeholders":{
+            "get":{
+                "description":" Retrieves case stakeholders.",
+                "summary":"Retrieve Case Stakeholders",
+                "operationId":"get /cases/{id}/stakeholders",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                ],
+                "parameters":[
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "type":"stakeHolders",
+                                "levels":0,
+                                "links":[
+                                    {
+                                        "rel":"back",
+                                        "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c"
+                                    },
+                                    {
+                                        "rel":"self",
+                                        "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c/stakeholders"
+                                    }
+                                ],
+                                "stakeholder":{
+                                    "stakeholder":[
+                                        {
+                                            "name":"Admin",
+                                            "members":[
+                                                {
+                                                    "memberName":"jstein",
+                                                    "memberType":"USER"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name":"Car park assistant",
+                                            "members":[
+                                                {
+                                                    "memberName":"EURent.CarParkAssistant",
+                                                    "memberType":"APPLICATION_ROLE"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name":"Front desk",
+                                            "members":[
+                                                {
+                                                    "memberName":"EURent.FrontDeskClerk",
+                                                    "memberType":"APPLICATION_ROLE"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name":"Rental manager",
+                                            "members":[
+                                                {
+                                                    "memberName":"EURent.Manager",
+                                                    "memberType":"APPLICATION_ROLE"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"cases-{id}-stakeholders-get"
+            },
+            "post":{
+                "description":" Adds a case stakeholder.",
+                "summary":"Add a Case Stakeholder",
+                "operationId":"post /cases/{id}/stakeholders",
+                "produces":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "consumes":[
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters":[
+                    {
+                        "x-examples":{
+                            "application/json":{
+                                "name":"Test_StakeHolder",
+                                "members":[
+                                    {
+                                        "memberName":"jcooper",
+                                        "memberType":"USER"
+                                    }
+                                ]
+                            }
+                        },
+                        "schema":{
+                        },
+                        "name":"body",
+                        "in":"body",
+                        "description":"",
+                        "required":false
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "examples":{
+                            "application/json":{
+                                "type":"stakeHolders",
+                                "levels":0,
+                                "links":[
+                                    {
+                                        "rel":"back",
+                                        "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c"
+                                    },
+                                    {
+                                        "rel":"self",
+                                        "href":"http://example.com/bpm/api/3.0/cases/5e4fa87f-d698-4c06-912c-79d162f4e03c/stakeholders"
+                                    }
+                                ],
+                                "stakeholder":{
+                                    "stakeholder":[
+                                        {
+                                            "name":"Admin",
+                                            "members":[
+                                                {
+                                                    "memberName":"jstein",
+                                                    "memberType":"USER"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name":"Car park assistant",
+                                            "members":[
+                                                {
+                                                    "memberName":"EURent.CarParkAssistant",
+                                                    "memberType":"APPLICATION&#95ROLE"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name":"Front desk",
+                                            "members":[
+                                                {
+                                                    "memberName":"EURent.FrontDeskClerk",
+                                                    "memberType":"APPLICATION&#95ROLE"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name":"Rental manager",
+                                            "members":[
+                                                {
+                                                    "memberName":"EURent.Manager",
+                                                    "memberType":"APPLICATION&#95ROLE"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name":"Test_StakeHolder",
+                                            "members":[
+                                                {
+                                                    "memberName":"James Cooper",
+                                                    "memberType":"USER"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "schema":{
+                        },
+                        "description":"Success"
+                    }
+                },
+                "tags":[
+                    "All Endpoints"
+                ],
+                "x-internal-id":"cases-{id}-stakeholders-post"
+            }
+        }
+    },
+    "definitions":{
+        "CreateTaskAction":{
+            "type":"object",
+            "$schema":"http://json-schema.org/draft-03/schema",
+            "id":"http://jsonschema.net",
+            "required":true,
+            "properties":{
+                "priority":{
+                    "type":"string",
+                    "required":true
+                },
+                "startDate":{
+                    "type":"string",
+                    "required":true
+                },
+                "taskDefinitionId":{
+                    "type":"string",
+                    "required":true
+                },
+                "creator":{
+                    "type":"string",
+                    "required":true
+                },
+                "assignees":{
+                    "type":"array",
+                    "required":true
+                },
+                "title":{
+                    "type":"string",
+                    "required":true
+                },
+                "taskId":{
+                    "type":"string",
+                    "required":true
+                },
+                "routingSlip":{
+                    "type":"string",
+                    "required":true
+                },
+                "dueDate":{
+                    "type":"string",
+                    "required":true
+                }
+            }
+        }
+    },
+    "tags":[
+        {
+            "name":"All Endpoints",
+            "description":"Oracle Business Process Management REST API Endpoints"
+        }
+    ],
+    "swagger":"2.0"
+}
