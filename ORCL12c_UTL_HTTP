@@ -1,0 +1,16 @@
+declare  
+    lo_req    utl_http.req;  
+    lo_resp   utl_http.resp;  
+begin  
+    utl_http.set_detailed_excp_support ( true );  
+    utl_http.set_wallet ( 'file:/u01/app/oracle/product/12.1.0.2/db_1/owm/wallets/oracle', 'welcome1');  
+    lo_req := utl_http.begin_request ( 'https://soavbox.oracle.com:7002' );  
+    lo_resp := utl_http.get_response ( lo_req );  
+    -- A successfull request would have the status code "200".   
+    dbms_output.put_line ( lo_resp.status_code );  
+    utl_http.end_response ( lo_resp );  
+exception  
+  when others then    
+    utl_http.end_response ( lo_resp );  
+    raise;  
+end;
