@@ -1,0 +1,6 @@
+GroupID="NewZealandGroup"
+Name="ANKI New Zealand"
+Description="Anki Pi New Zealand"
+Region="APAC"
+City="Auckland"
+ContactEmail="jaco.j.coetzee@oracle.com"
